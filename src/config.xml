@@ -23,6 +23,6 @@
     </bean>
 
     <bean id="view" class="di.NewlecRecordView">
-
+        <property name="record" ref="record"/>
     </bean>
 </beans>
