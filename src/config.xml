@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="record" class="di.NewlecRecord" />
 
-    <bean id="view" class="di.NewlecRecordView">
+    <bean id="view" class="di.NewlecRecordGridView">
         <property name="record" ref="record"/>
     </bean>
 </beans>

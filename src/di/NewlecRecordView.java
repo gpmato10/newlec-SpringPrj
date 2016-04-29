@@ -15,11 +15,18 @@ public class NewlecRecordView implements RecordView {
     }
 
     @Override
+    public Record getRecord() {
+        return record;
+    }
+
+    @Override
     public void input() {
         Scanner scan = new Scanner(System.in);
         System.out.println("kor:");
         record.setKor(scan.nextInt());
+        System.out.println("eng:");
         record.setEng(scan.nextInt());
+        System.out.println("math:");
         record.setMath(scan.nextInt());
     }
 
