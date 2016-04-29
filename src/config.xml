@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--<bean id="record" name="r1,r2 r3;r4" class="di.NewlecRecord">-->
@@ -16,11 +17,12 @@
         <!--<constructor-arg value="30" />-->
     <!--</bean>-->
 
-    <bean id="record" name="r1,r2 r3;r4" class="di.NewlecRecord">
+    <bean id="record" name="r1,r2 r3;r4" class="di.NewlecRecord"
+    p:kor="50" p:eng="60" p:math="70">
 
-        <constructor-arg name="math" value="10" />
-        <constructor-arg name="kor" value="20" />
-        <constructor-arg name="eng" value="30" />
     </bean>
 
+    <bean id="view" class="di.NewlecRecordView">
+
+    </bean>
 </beans>
