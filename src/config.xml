@@ -2,9 +2,25 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="record" class="di.NewlecRecord" />
+    <!--<bean id="record" name="r1,r2 r3;r4" class="di.NewlecRecord">-->
 
-    <bean id="view" class="di.NewlecRecordGridView">
-        <property name="record" ref="record"/>
+        <!--<property name="kor" value="20"/>-->
+        <!--<property name="eng" value="30"/>-->
+        <!--<property name="math" value="40"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="record" name="r1,r2 r3;r4" class="di.NewlecRecord">-->
+
+        <!--<constructor-arg value="10" />-->
+        <!--<constructor-arg value="20" />-->
+        <!--<constructor-arg value="30" />-->
+    <!--</bean>-->
+
+    <bean id="record" name="r1,r2 r3;r4" class="di.NewlecRecord">
+
+        <constructor-arg name="math" value="10" />
+        <constructor-arg name="kor" value="20" />
+        <constructor-arg name="eng" value="30" />
     </bean>
+
 </beans>

@@ -14,9 +14,10 @@ public class Program {
 //        view.setRecord(record);
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
-        RecordView view = (RecordView) ctx.getBean("view");
+//        RecordView view = (RecordView) ctx.getBean("view");
+        Record r = (Record) ctx.getBean("r4");
+        System.out.println(r.total());
 
-        view.input();
-        view.print();
+
     }
 }
