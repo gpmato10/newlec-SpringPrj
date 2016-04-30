@@ -16,6 +16,9 @@ public class NewlecCalculator implements Calculator {
 //        sw.start();
 //        log.info("타이머 시작");
 
+        if(x > 100) {
+            throw new IllegalArgumentException("100 보다 큰 인자는 전달 할 수 없습니다");
+        }
         int sum = x+y;
 
 //        sw.stop();

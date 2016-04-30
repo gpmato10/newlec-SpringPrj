@@ -26,10 +26,12 @@
         <property name="record" ref="record"/>
     </bean>
 
-    <bean id="cal" class="aop.NewlecCalculator"></bean>
-    <bean id="logPrintAroundAdvice" class="aop.LogPrintAroundAdvice"></bean>
-    <bean id="logPrintBeforeAdvice" class="aop.LogPrintBeforeAdvice"></bean>
+    <bean id="cal" class="aop.NewlecCalculator" />
+    <bean id="logPrintAroundAdvice" class="aop.LogPrintAroundAdvice" />
+    <bean id="logPrintBeforeAdvice" class="aop.LogPrintBeforeAdvice" />
     <bean id="logPrintAfterReturnningAdvice" class="aop.LogPrintAfterReturnningAdvice" />
+    <bean id="logPrintAfterThrowingAdvice" class="aop.LogPrintAfterThrowingAdvice" />
+
 
     <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
 
@@ -39,6 +41,7 @@
                 <value>logPrintAroundAdvice</value>
                 <value>logPrintBeforeAdvice</value>
                 <value>logPrintAfterReturnningAdvice</value>
+                <value>logPrintAfterThrowingAdvice</value>
             </list>
         </property>
 
