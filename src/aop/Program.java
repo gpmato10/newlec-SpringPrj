@@ -22,7 +22,8 @@ public class Program {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
         Calculator proxy = (Calculator) ctx.getBean("proxy");
 
-        System.out.println(proxy.add(103, 4));
-//        System.out.println(cal.add(3, 4));
+        System.out.println(proxy.add(3, 4));
+        System.out.println(proxy.sub(103, 4));
+        System.out.println(proxy.multy(103, 4));
     }
 }

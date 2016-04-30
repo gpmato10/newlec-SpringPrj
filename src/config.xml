@@ -32,16 +32,26 @@
     <bean id="logPrintAfterReturnningAdvice" class="aop.LogPrintAfterReturnningAdvice" />
     <bean id="logPrintAfterThrowingAdvice" class="aop.LogPrintAfterThrowingAdvice" />
 
+    <bean id="namePointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
 
+        <property name="mappedName" value="add"/>
+    </bean>
+
+    <bean id="nameAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+
+        <property name="pointcut" ref="namePointCut"/>
+        <property name="advice" ref="logPrintAroundAdvice"/>
+    </bean>
     <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
 
         <property name="target" ref="cal"/>
         <property name="interceptorNames">
             <list>
-                <value>logPrintAroundAdvice</value>
-                <value>logPrintBeforeAdvice</value>
-                <value>logPrintAfterReturnningAdvice</value>
-                <value>logPrintAfterThrowingAdvice</value>
+                <value>nameAdvisor</value>
+                <!--<value>logPrintAroundAdvice</value>-->
+                <!--<value>logPrintBeforeAdvice</value>-->
+                <!--<value>logPrintAfterReturnningAdvice</value>-->
+                <!--<value>logPrintAfterThrowingAdvice</value>-->
             </list>
         </property>
 
