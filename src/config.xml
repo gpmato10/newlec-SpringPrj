@@ -34,7 +34,12 @@
 
     <bean id="namePointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
 
-        <property name="mappedName" value="add"/>
+        <property name="mappedNames">
+            <list>
+                <value>add</value>
+                <value>sub</value>
+            </list>
+        </property>
     </bean>
 
     <bean id="nameAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
