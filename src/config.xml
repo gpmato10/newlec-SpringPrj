@@ -43,16 +43,29 @@
     <!--</bean>-->
 
 
-    <bean id="nameAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+    <!--<bean id="nameAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">-->
 
-        <property name="mappedNames">
+        <!--<property name="mappedNames">-->
+            <!--<list>-->
+                <!--<value>add</value>-->
+                <!--<value>sub</value>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="advice" ref="logPrintAroundAdvice"/>-->
+    <!--</bean>-->
+
+    <bean id="nameAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+
+        <property name="patterns">
             <list>
-                <value>add</value>
-                <value>sub</value>
+                <value>a.*</value>
+                <value>.*b</value>
             </list>
         </property>
         <property name="advice" ref="logPrintAroundAdvice"/>
     </bean>
+
+
     <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
 
         <property name="target" ref="cal"/>
