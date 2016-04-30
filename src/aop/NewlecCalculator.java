@@ -10,17 +10,18 @@ import org.springframework.util.StopWatch;
 public class NewlecCalculator implements Calculator {
     @Override
     public int add(int x, int y) {
-        Log log = LogFactory.getLog(this.getClass());
+//        Log log = LogFactory.getLog(this.getClass());
+//
+//        StopWatch sw = new StopWatch();
+//        sw.start();
+//        log.info("타이머 시작");
 
-        StopWatch sw = new StopWatch();
-        sw.start();
-        log.info("타이머 시작");
         int sum = x+y;
 
-        sw.stop();
-        log.info("타이머 정지");
-        log.info("[TIMERLOG]METHOD : add");
-        log.info("[TIMERLOG]Process Time: " + sw.getTotalTimeMillis());
+//        sw.stop();
+//        log.info("타이머 정지");
+//        log.info("[TIMERLOG]METHOD : add");
+//        log.info("[TIMERLOG]Process Time: " + sw.getTotalTimeMillis());
 
         return sum;
     }
